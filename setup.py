@@ -20,7 +20,7 @@ setup(
         "Intended Audience :: Developers",
         "Topic :: Internet",
       ],
-    install_requires=['Flask','requests','tornado'],
+    install_requires=['Flask-Babel','Flask','requests','tornado'],
     entry_points = {
     'console_scripts': [
                         'thememapper = thememapper.core.main:start_thememapper'
