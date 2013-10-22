@@ -1,0 +1,2 @@
+pybabel extract -F babel.cfg -o messages.pot thememapper
+pybabel update -i messages.pot -d translations -l es

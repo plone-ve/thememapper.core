@@ -48,45 +48,45 @@
 {% endblock %}
 {% block mask_content %}
 <div class="mask_content_block" id="rule_generate_box">
-    <h1>Generate Rule</h1>
+    <h1>{{ _('Generate Rule') }}</h1>
     <hr/>
     <div>
         <form id="rule_generate_form" action="" method="get">
             <div class="selector_both">
                 <input id="radio_action_replace" name="rule_type" type="radio" value="replace"/>
-                <label for="radio_action_replace">Replace</label>
+                <label for="radio_action_replace">{{ _('Replace') }}</label>
             </div>
             <div class="selector_content">
                 <input id="radio_action_drop_content" name="rule_type" type="radio" value="drop_content"/>
-                <label for="radio_action_drop_content">Drop content element</label>
+                <label for="radio_action_drop_content">{{ _('Drop content element') }}</label>
             </div>
             <div class="selector_theme">
                 <input id="radio_action_drop_theme" name="rule_type" type="radio" value="drop_theme"/>
-                <label for="radio_action_drop_theme">Drop theme element</label>
+                <label for="radio_action_drop_theme">{{ _('Drop theme element') }}</label>
             </div>
             <div class="selector_both">
                 <input id="radio_action_before" name="rule_type" type="radio" value="before"/>
-                <label for="radio_action_before">Before</label>
+                <label for="radio_action_before">{{ _('Before') }}</label>
             </div>
             <div class="selector_both">
                 <input id="radio_action_after" name="rule_type" type="radio" value="after"/>
-                <label for="radio_action_after">After</label>
+                <label for="radio_action_after">{{ _('After') }}</label>
             </div>
             <hr/>
             <div id="theme-applyto">
                 <input id="checkbox_theme_children" type="checkbox" name="checkbox_theme_children" value="1" />
-                <label for="checkbox_theme_children">Apply to theme node children</label>
+                <label for="checkbox_theme_children">{{ _('Apply to theme node children') }}</label>
             </div>
 
             <div id="content-applyto">
                 <input id="checkbox_content_children" type="checkbox" name="checkbox_content_children" value="1" />
-                <label for="checkbox_content_children">Apply to content node children</label>
+                <label for="checkbox_content_children">{{ _('Apply to content node children') }}</label>
             </div>
             <hr/>
             <textarea readonly="readonly" id="rule_preview"></textarea>
             <div style="text-align:right">
-                <button type="button" class="button_cancel">Cancel</button>
-                <button type="button" class="button_ok">Generate</button>
+                <button type="button" class="button_cancel">{{ _('Cancel') }}</button>
+                <button type="button" class="button_ok">{{ _('Generate') }}</button>
             </div>
         </form>
     </div>
@@ -97,9 +97,9 @@
     <div id="theme-iframe-wrap">
         <div class="btn-toolbar iframe-menu">
             <div class="btn-group">
-                <a class="btn btn-mini parent" href="Javascript:void(0);" title="Select parent" disabled="disabled" data-iframe="theme"><i class="icon-arrow-up"></i></a>
-                <a class="btn btn-mini dropdown-toggle fullscreen" href="Javascript:void(0);" title="Maximize" data-iframe="theme"><i class="icon-resize-full"></i></a>
-                <a class="btn btn-mini windowed" href="Javascript:void(0);" title="Minimize" data-iframe="theme" style="display:none;"><i class="icon-resize-small"></i></a>
+                <a class="btn btn-mini parent" href="Javascript:void(0);" title="{{ _('Select parent') }}" disabled="disabled" data-iframe="theme"><i class="icon-arrow-up"></i></a>
+                <a class="btn btn-mini dropdown-toggle fullscreen" href="Javascript:void(0);" title="{{ _('Maximize') }}" data-iframe="theme"><i class="icon-resize-full"></i></a>
+                <a class="btn btn-mini windowed" href="Javascript:void(0);" title="{{ _('Minimize') }}" data-iframe="theme" style="display:none;"><i class="icon-resize-small"></i></a>
             </div>
             <select name="template-select" id="template-select" style="margin-bottom:0;float:left;">
                 {% for template in templates %}
@@ -110,27 +110,27 @@
         <iframe id="theme-iframe" class="iframe" src=""></iframe>
         <div class="selector-wrap">
             <div class="selector" id="theme-selector-hover"></div>
-            <div class="selector">Selector: <span id="theme-selector-selected"></span></div>
+            <div class="selector">{{ _('Selector') }}: <span id="theme-selector-selected"></span></div>
             <div class="cf"></div>
         </div>
     </div>
     <div id="content-iframe-wrap">
         <div class="btn-toolbar iframe-menu">
             <div class="pull-left btn-group">
-                <a class="btn btn-mini" id="view-result" data-url="http://localhost:{{ settings['port'] }}/editor/result/" href="Javascript:void(0);" target="_blank" title="View result"><i class="icon-eye-open"></i> View result</a>
-                <a class="btn btn-mini" id="generate-rule" href="Javascript:void(0);" disabled="disabled" title="Generate rule"><i class="icon-fire"></i> Generate rule</a>
+                <a class="btn btn-mini" id="view-result" data-url="http://localhost:{{ settings['port'] }}/editor/result/" href="Javascript:void(0);" target="_blank" title="{{ _('View result') }}"><i class="icon-eye-open"></i> {{ _('View result') }}</a>
+                <a class="btn btn-mini" id="generate-rule" href="Javascript:void(0);" disabled="disabled" title="{{ _('Generate rule') }}"><i class="icon-fire"></i> {{ _('Generate rule') }}</a>
             </div>
             <div class="btn-group">
-                <a class="btn btn-mini" id="highlighter" href="Javascript:void(0);" data-toggle="button" title="Toggle highlighter" data-iframe="content"><i class="icon-hand-up"></i></a>
-                <a class="btn btn-mini parent" href="Javascript:void(0);" title="Select parent" disabled="disabled" data-iframe="content"><i class="icon-arrow-up"></i></a>
-                <a class="btn btn-mini dropdown-toggle fullscreen" href="Javascript:void(0);" title="Maximize" data-iframe="content"><i class="icon-resize-full"></i></a>
-                <a class="btn btn-mini windowed" href="Javascript:void(0);" title="Minimize" data-iframe="content" style="display:none;"><i class="icon-resize-small"></i></a>
+                <a class="btn btn-mini" id="highlighter" href="Javascript:void(0);" data-toggle="button" title="{{ _('Toggle highlighter') }}" data-iframe="content"><i class="icon-hand-up"></i></a>
+                <a class="btn btn-mini parent" href="Javascript:void(0);" title="{{ _('Select parent') }}" disabled="disabled" data-iframe="content"><i class="icon-arrow-up"></i></a>
+                <a class="btn btn-mini dropdown-toggle fullscreen" href="Javascript:void(0);" title="{{ _('Maximize') }}" data-iframe="content"><i class="icon-resize-full"></i></a>
+                <a class="btn btn-mini windowed" href="Javascript:void(0);" title="{{ _('Minimize') }}" data-iframe="content" style="display:none;"><i class="icon-resize-small"></i></a>
             </div>
         </div>
         <iframe id="content-iframe" class="iframe" src=""></iframe>
         <div class="selector-wrap">
             <div class="selector" id="content-selector-hover"></div>
-            <div class="selector">Selector: <span id="content-selector-selected"></span></div>
+            <div class="selector">{{ _('Selector') }}: <span id="content-selector-selected"></span></div>
             <div class="cf"></div>
         </div>
     </div>
@@ -141,7 +141,7 @@
     <form id="rules-form" action="/ajax/rules/save/" method="post">
         <div class="btn-toolbar" style="text-align:right;">
             <div class="btn-group">
-                <a class="btn btn-mini" id="rules-reload" href="Javascript:void(0);" title="Reload rules"><i class="icon-refresh"></i></a>
+                <a class="btn btn-mini" id="rules-reload" href="Javascript:void(0);" title="{{ _('Reload rules') }}"><i class="icon-refresh"></i></a>
             </div>
             <select id="rules-select" name="path" style="margin-bottom:0;float:left;">
                 {% for rule_file in rule_files %}
@@ -155,7 +155,7 @@
             </div>
             <textarea id="rules" name="rules" style="width:100%;min-height:300px;">{{ rules }}</textarea>
         </div>
-        <button id="rules-save" class="btn btn-primary" style="margin-top:5px;float:right;" type="button" data-loading-text="Saving..."/>Save rules</button>
+        <button id="rules-save" class="btn btn-primary" style="margin-top:5px;float:right;" type="button" data-loading-text="{{ _('Saving...') }}"/>{{ _('Save rules') }}</button>
         <div class="clear"></div>
     </form>
 </div>

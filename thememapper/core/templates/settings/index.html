@@ -21,14 +21,14 @@
 {% endblock %}
 {% block content %}
 <form method="post" action="">
-    <h2>ThemeMapper Settings</h2>
-    <label>Port</label>
+    <h2>{{ _('ThemeMapper Settings') }}</h2>
+    <label>{{ _('Port') }}</label>
     <input type="text" name="thememapper_port" value="{{ settings['port'] }}" placeholder="5001" />
-    <label>Content url</label>
+    <label>{{ _('Content url') }}</label>
     <input type="text" name="thememapper_content_url" value="{{ settings['content_url'] }}" placeholder="http://localhost/" />
-    <label>Themes directory</label>
+    <label>{{ _('Themes directory') }}</label>
     <input type="text" name="thememapper_themes_directory" value="{{ settings['themes_dir'] }}" placeholder="/path/to/themes/" />
-    <label>Active theme</label>
+    <label>{{ _('Active theme') }}</label>
     <select name="thememapper_theme">
         {% for theme in themes %}
             <option value="{{ theme['name'] }}" {% if theme['active'] %}selected="selected"{% endif %}>{{ theme['name'] }}</option>
@@ -39,16 +39,16 @@
         <img class="theme-images" id="theme-{{ theme['name'] }}" src="/iframe/theme{{ theme['preview'] }}" />
     {% endif %}
     {% endfor %}
-    <h2>Diazo Settings</h2>
-    <label style="display:inline-block">Use local thememapper.diazo</label>&nbsp;&nbsp;
+    <h2>{{ _('Diazo Settings') }}</h2>
+    <label style="display:inline-block">{{ _('Use local thememapper.diazo') }}</label>&nbsp;&nbsp;
     <input style="margin:0;" type="checkbox" name="diazo_run" value="True" {% if settings['diazo_run'] == 'True' %}checked="checked"{% endif %} />
-    <label>Address</label>
+    <label>{{ _('Address') }}</label>
     <input type="text" name="diazo_ip" value="{{ settings['diazo_addr'] }}" placeholder="127.0.0.1" />       
-    <label>Port</label>
+    <label>{{ _('Port') }}</label>
     <input type="text" name="diazo_port" value="{{ settings['diazo_port'] }}" placeholder="5000" />
-    <label>Static path | Only use if you know what your are doing. Default: empty</label>
+    <label>{{ _('Static path | Only use if you know what your are doing. Default: empty') }}</label>
     <input type="text" name="static_path" value="{{ settings['static_path'] }}" placeholder="" />
     <br/>
-    <button class="btn btn-primary" style="margin-top:5px;" type="submit">Save settings</button>
+    <button class="btn btn-primary" style="margin-top:5px;" type="submit">{{ _('Save settings') }}</button>
 </form>
 {% endblock %}

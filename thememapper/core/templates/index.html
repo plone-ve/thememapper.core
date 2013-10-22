@@ -5,9 +5,9 @@
 {% endblock %}
 {% block content %}
 <!-- Add your site or application content here -->
-<h3>Number of themes found:</h3>
+<h3>{{ _('Number of themes found') }}:</h3>
 <h4 style="color:#00858c;">{{ amount }}</h4>
-<h3>Current Theme:</h3>
+<h3>{{ _('Current Theme') }}:</h3>
 <h4 style="color:#00858c;">{{ theme }}</h4>
 {% if preview %}
 <img src="/iframe/theme/{{ preview }}" />
