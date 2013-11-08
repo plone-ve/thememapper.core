@@ -1,6 +1,8 @@
-from thememapper.core.controller.server import _ServerController
+# -*- coding:utf-8 -*-
 
-from flask import Flask,request
+from thememapper.core.controller.server import _ServerController
+from flask import Flask, g, request
+from flask.ext.babel import Babel, gettext
 from werkzeug.routing import BaseConverter
 import os
 import argparse
@@ -13,6 +15,30 @@ class RegexConverter(BaseConverter):
 app = Flask(__name__)
 app.threaded = True
 app.url_map.converters['regex'] = RegexConverter
+
+# Babel (i18n)
+babel = Babel(app)
+_ = gettext
+
+# Babel
+BABEL_DEFAULT_LOCALE = 'en'
+BABEL_DEFAULT_TIMEZONE = 'UTC'
+
+# Available languages
+AVAILABLE_LOCALES = ['en', 'es']
+
+@babel.localeselector
+def get_locale():
+    # Try to guess the language from the user accept
+    # header the browser transmits.  We support es/en in this
+    # moment.  The best match wins.
+    return request.accept_languages.best_match(AVAILABLE_LOCALES)
+
+@babel.timezoneselector
+def get_timezone():
+    user = getattr(g, 'user', None)
+    if user is not None:
+        return user.timezone
 
 def start_thememapper():
     global settings
