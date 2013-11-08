@@ -1,2 +1,2 @@
-from flask.ext.babel import Babel
-babel = Babel(thememapper.core)
+#from flask.ext.babel import Babel
+#babel = Babel(thememapper)
