@@ -1,14 +1,13 @@
-# Spanish translations for PROJECT.
-# Copyright (C) 2013 ORGANIZATION
-# This file is distributed under the same license as the PROJECT project.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+# Spanish translations for ThemeMapper.
+# Copyright (C) 2013 Brandon Tilstra
+# This file is distributed under the same license as the ThemeMapper project.
 # Leonardo J. Caballero G. <leonardocaballero@gmail.com>, 2013.
 msgid ""
 msgstr ""
-"Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2013-10-20 12:17-0630\n"
-"PO-Revision-Date: 2013-10-20 12:25-0430\n"
+"Project-Id-Version:  ThemeMapper\n"
+"Report-Msgid-Bugs-To: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
+"POT-Creation-Date: 2013-11-08 18:36-0530\n"
+"PO-Revision-Date: 2013-10-20 12:25-0530\n"
 "Last-Translator: Leonardo J. Caballero G. <leonardocaballero@gmail.com>\n"
 "Language-Team: ES <LL@li.org>\n"
 "Language: es\n"
@@ -91,12 +90,12 @@ msgstr "Seleccionar padre"
 #: thememapper/core/templates/editor/index.html:101
 #: thememapper/core/templates/editor/index.html:126
 msgid "Maximize"
-msgstr "Máximizar"
+msgstr "Maximizar"
 
 #: thememapper/core/templates/editor/index.html:102
 #: thememapper/core/templates/editor/index.html:127
 msgid "Minimize"
-msgstr "Mínimizar"
+msgstr "Minimizar"
 
 #: thememapper/core/templates/editor/index.html:113
 #: thememapper/core/templates/editor/index.html:133
@@ -113,7 +112,7 @@ msgstr "Generar regla"
 
 #: thememapper/core/templates/editor/index.html:124
 msgid "Toggle highlighter"
-msgstr "Cambiar a resaltador"
+msgstr "Cambiar a resaltado"
 
 #: thememapper/core/templates/editor/index.html:144
 msgid "Reload rules"
@@ -168,7 +167,7 @@ msgstr "Dirección"
 msgid "Static path | Only use if you know what your are doing. Default: empty"
 msgstr ""
 "Ruta de recursos 'static' | Solamente use si usted sabe que es lo que esta "
-"haciendo. Por defecto: vacio"
+"haciendo. Por defecto: vacío"
 
 #: thememapper/core/templates/settings/index.html:52
 msgid "Save settings"
